@@ -50,3 +50,29 @@ export const pascal = lines => {
     return triangle;
 
 };
+
+const repeat = (n, char) => {
+    const ret = [];
+    for (let i = 0; i < n; ++i) {
+        ret.push(char);
+    }
+    return ret;
+};
+
+export const printPascal = lines => {
+    const triangle = pascal(lines);
+    const lastLine = triangle[triangle.length - 1];
+    const postions = lastLine * 2 - 1;
+    const ret = [];
+    for (let i = 0; i < triangle.length; ++i) {
+        let line = repeat(triangle.length - 1 - i, '');
+        for (let j = 0; j < triangle[i].length; ++j) {
+            line.push(triangle[i][j]);
+            if (j !== triangle[i].length - 1) {
+                line.push('');
+            }
+        }
+        ret.push(line);
+    }
+    return ret;
+};
