@@ -28,16 +28,22 @@ export const pascal = lines => {
     for (let i = 1; i < lines; ++i) {
         let line = [1];
         let preLine = triangle[i - 1];
-        let mid;
 
         if (preLine.length % 2 === 0) {
-            mid = preLine.length / 2;
+            for (let j = 1; j < Math.floor((1 + preLine.length) / 2); ++j) {
+                line[j] = (preLine[j - 1] | 0) + preLine[j];
+            }
+            let mid = preLine[preLine.length / 2 - 1] + preLine[preLine.length / 2];
+            let lineR = line.slice().reverse();
+            line = line.concat([mid]).concat(lineR);
         } else {
-            mid = Math.ceil(preLine.length / 2);
+            for (let j = 1; j < (1 + preLine.length) / 2; ++j) {
+                line[j] = (preLine[j - 1] | 0) + preLine[j];
+            }
+            let lineR = line.slice().reverse();
+            line = line.concat(lineR);
         }
-        for (let j = 1; j < preLine.length + 1; ++j) {
-            line[j] = (preLine[j - 1]|0) + (preLine[j]|0);
-        }
+
         triangle.push(line);
     }
 

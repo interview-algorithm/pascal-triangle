@@ -20,6 +20,7 @@ describe('pascal', function () {
                 [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1],
                 [1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1]
             ];
+            //console.log(items);
             assert.deepEqual(items, expected);
         });
     });
