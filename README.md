@@ -4,6 +4,14 @@
 
 Pascal&#39;s Triangle
 
+# usage
+
+```js
+const pascal = require('pascal-triangle');
+pascal(13);
+printPascal(13);
+```
+
 # author
  - yanni4night@gmail.com
 
@@ -13,9 +21,9 @@ MIT
 [npm-url]: https://npmjs.org/package/pascal-triangle
 [downloads-image]: http://img.shields.io/npm/dm/pascal-triangle.svg
 [npm-image]: http://img.shields.io/npm/v/pascal-triangle.svg
-[travis-url]: https://travis-ci.org/anonymous/pascal-triangle
-[travis-image]: http://img.shields.io/travis/anonymous/pascal-triangle.svg
-[david-dm-url]:https://david-dm.org/anonymous/pascal-triangle
-[david-dm-image]:https://david-dm.org/anonymous/pascal-triangle.svg
-[david-dm-dev-url]:https://david-dm.org/anonymous/pascal-triangle#info=devDependencies
-[david-dm-dev-image]:https://david-dm.org/anonymous/pascal-triangle/dev-status.svg
+[travis-url]: https://travis-ci.org/yanni4night/pascal-triangle
+[travis-image]: http://img.shields.io/travis/yanni4night/pascal-triangle.svg
+[david-dm-url]:https://david-dm.org/yanni4night/pascal-triangle
+[david-dm-image]:https://david-dm.org/yanni4night/pascal-triangle.svg
+[david-dm-dev-url]:https://david-dm.org/yanni4night/pascal-triangle#info=devDependencies
+[david-dm-dev-image]:https://david-dm.org/yanni4night/pascal-triangle/dev-status.svg
