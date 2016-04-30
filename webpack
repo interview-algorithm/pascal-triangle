@@ -1,1 +1,0 @@
-console.error("\n/Users/yinyong/Workspace/pascal-triangle/src/index.js:14\nexport const pascal = lines => {\n^\nParseError: 'import' and 'export' may appear only with 'sourceType: module'");
