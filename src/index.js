@@ -52,17 +52,25 @@ export const pascal = lines => {
 };
 
 const repeat = (n, char) => {
-    const ret = [];
-    for (let i = 0; i < n; ++i) {
-        ret.push(char);
+    let ret = [];
+    char = [char];
+
+    while (1) {
+        if (n & 1) {
+            ret.push(...char);
+        }
+        n >>= 1;
+        if (0 === n) {
+            return ret;
+        }
+        char.push(...char);
     }
-    return ret;
 };
 
 export const printPascal = lines => {
     const triangle = pascal(lines);
     const ret = [];
-    
+
     for (let i = 0; i < triangle.length; ++i) {
         let line = repeat(triangle.length - 1 - i, '');
         for (let j = 0; j < triangle[i].length; ++j) {
